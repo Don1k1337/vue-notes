@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    background: #5b89d3;
+}
+
+
+h1 {
+    color: #054e8a;
+    font-size: 2.2rem;
+    font-family: "Noto Sans Georgian SemCond", sans-serif;
+}
+.card {
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
+    background: #fff;
+}
+.card.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 800px;
+}
+.pt-5 {
+    padding-top: 5rem;
+}
+
+
+
+.btn {
+    color: white;
+    text-decoration: none;
+    border: 1px solid #054e8a;
+    transition-duration: 0.4s;
+    width: fit-content;
+    margin-right: 10px;
+    padding: 0.5rem 1.5rem;
+    border-radius: 100px;
+    position: relative;
+    outline: none;
+    font-weight: 700;
+}
+
+.primary {
+    color: white;
+    background-color: #4CAF50;
+}
+.primary:hover {
+    color: black;
+    background-color: #dedcdc; /* Green */
+}
+.danger {
+    color: white;
+    background-color: #ec0f0f;
+}
+
+.danger:hover {
+    color: black;
+    background-color: #dedcdc; /* Green */
+}
+
+.form-control {
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+.form-control input{
+    margin: 0;
+    outline: none;
+    display: block;
+    width: 100%;
+}
