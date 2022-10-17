@@ -15,18 +15,17 @@
         <h1>{{ title }}</h1>
         <div class="form-control">
             <input type="text"
-                   v-bind:placeholder="inputPlaceholder"
-                   v-bind:value="inputValue"
-                   v-on:input="inputHandler"
-                   v-on:keypress.enter="addNewNote"
+                   :placeholder="inputPlaceholder"
+                   v-model="inputValue"
+                   @keypress.enter="addNewNote"
             />
         </div>
-        <button class="btn primary" v-on:click="addNewNote">Add</button>
+        <button class="btn primary" @click="addNewNote">Add</button>
         <hr />
         <ul class="list" v-if="notes.length > 0">
             <li class="list-item" v-for="newNote in notes">
-                {{ newNote }}
-                <button class="btn danger" v-on:click="removeNote">Delete</button>
+                {{ toUpperCase(newNote) }}
+                <button class="btn danger" @click="removeNote">Delete</button>
             </li>
         </ul>
         <div v-else>

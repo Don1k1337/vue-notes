@@ -8,9 +8,6 @@ const App = {
         }
     },
     methods: {
-        inputHandler(event) {
-            this.inputValue = event.target.value;
-        },
         addNewNote(note) {
             if (this.inputValue !== '') {
                 note = this.inputValue;
@@ -18,9 +15,18 @@ const App = {
                 this.inputValue = ''
             }
         },
+        toUpperCase(item) {
+          return item.toUpperCase();
+        },
         removeNote(note) {
             this.notes.pop(note);
-        }
+        },
+    },
+    computed: {
+        doubleCountComputed() {
+            console.log('doubleCountComputed')
+            return this.notes.length * 2;
+        },
     }
 }
 

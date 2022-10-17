@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-size: 16px;
+    font-family: "Noto Sans Georgian SemCond", sans-serif;
 }
 
 body {
@@ -11,7 +12,6 @@ body {
 h1 {
     color: #054e8a;
     font-size: 2.2rem;
-    font-family: "Noto Sans Georgian SemCond", sans-serif;
 }
 .card {
     padding: 1rem;
@@ -50,17 +50,21 @@ h1 {
 }
 
 .primary {
-    color: white;
-    background-color: #4CAF50;
+    color: #3ea147;
+    background-color: #ffffff;
 }
 .primary:hover {
-    color: black;
-    background-color: #dedcdc; /* Green */
+    color: #ffffff;
+    background-color: #3ea147;
 }
 .danger {
-    color: white;
+    color: #ffffff;
     background-color: #ec0f0f;
 
+}
+.danger:hover {
+    color: #ffffff;
+    background-color: #c74c4c;
 }
 
 .list {
@@ -75,10 +79,7 @@ h1 {
     padding: 0.5rem;
 }
 
-.danger:hover {
-    color: black;
-    background-color: #dedcdc; /* Green */
-}
+
 
 .form-control {
     position: relative;
