@@ -1,8 +1,8 @@
 const App = {
     data() {
         return {
-            inputPlaceholder: 'Input your task for To-Do',
-            title: 'To-Do list',
+            inputPlaceholder: 'Input your note for Notes list',
+            title: 'Notes list',
             inputValue: '',
             notes: [],
         }
@@ -11,16 +11,16 @@ const App = {
         inputHandler(event) {
             this.inputValue = event.target.value;
         },
-        addNewTask(task) {
-            task = this.inputValue;
-            this.notes.push(task);
-            this.inputValue = ''
+        addNewNote(note) {
+            if (this.inputValue !== '') {
+                note = this.inputValue;
+                this.notes.push(note);
+                this.inputValue = ''
+            }
         },
-        // inputKeyPress(event) {
-        //     if (event.key === 'Enter') {
-        //         this.addNewTask();
-        //     }
-        // }
+        removeNote(note) {
+            this.notes.pop(note);
+        }
     }
 }
 

@@ -60,6 +60,19 @@ h1 {
 .danger {
     color: white;
     background-color: #ec0f0f;
+
+}
+
+.list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
 }
 
 .danger:hover {
