@@ -22,12 +22,6 @@ const App = {
             this.notes.pop(note);
         },
     },
-    computed: {
-        doubleCountComputed() {
-            console.log('doubleCountComputed')
-            return this.notes.length * 2;
-        },
-    }
 }
 
 
