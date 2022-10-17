@@ -12,7 +12,8 @@ const App = {
             if (this.inputValue !== '') {
                 note = this.inputValue;
                 this.notes.push(note);
-                this.inputValue = ''
+                this.inputValue = '';
+                this.saveNotes();
             }
         },
         toUpperCase(item) {
@@ -20,7 +21,21 @@ const App = {
         },
         removeNote(note) {
             this.notes.pop(note);
+            this.saveNotes();
         },
+        saveNotes() {
+            const parsed = JSON.stringify(this.notes);
+            localStorage.setItem('notes', parsed);
+        }
+    },
+    mounted() {
+        if (localStorage.getItem('notes')) {
+            try {
+                this.notes = JSON.parse(localStorage.getItem('notes'));
+            } catch(e) {
+                localStorage.removeItem('notes');
+            }
+        }
     },
 }
 
