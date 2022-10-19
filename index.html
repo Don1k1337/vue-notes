@@ -7,10 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Simple TO-DO</title>
     <link rel="stylesheet" href="css/main.css">
-
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-<div class="container" id="app">
+<div class="container" id="app" v-cloak>
     <div class="card">
         <h1>{{ title }}</h1>
         <div class="form-control">
